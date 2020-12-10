@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "/usr/local/Cellar/libomp/11.0.0/include/omp.h"
+#include <omp.h>
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
 /*
 Commands:
-gcc-10 -fopenmp -o hello hello.c
+gcc-10 -fopenmp -o hello 1.hello.c
 env OMP_NUM_THREADS=8 ./hello
 
 Output:

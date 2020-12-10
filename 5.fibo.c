@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "/usr/local/Cellar/libomp/11.0.0/include/omp.h"
+#include <omp.h>
 
 long fib(int n)
 {
@@ -18,7 +18,7 @@ int main()
 }
 /*
 Commands:
-gcc-10 -fopenmp -O2 -o fibo fibo.c
+gcc-10 -fopenmp -O2 -o fibo 5.fibo.c
 env OMP_NUM_THREADS=16 time ./fibo 
 
 Output:
