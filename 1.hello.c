@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <omp.h>
 
-int main(int argc, char *argv[])
+int main()
 {
-#pragma omp parallel
+#pragma omp parallel num_threads(2)
     {
-        printf("Hello World from thread -> %d\n", omp_get_thread_num());
+#pragma omp single printf("read input\n");
+        printf("compute results\n");
+#pragma omp single printf("write output\n");
     }
 }
 
